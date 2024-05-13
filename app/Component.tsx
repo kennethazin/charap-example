@@ -1,25 +1,27 @@
 "use client";
-
 import Link from "next/link";
 import anime from "animejs";
-import Image from "next/image";
 import { Explore } from "@/components/explore-call";
-import { Eczar } from "next/font/google";
-import localFont from "next/font/local";
-
-const amerton = localFont({
-  src: [
-    {
-      path: "fonts/amerton.ttf",
-    },
-  ],
-});
-
-const eczar = Eczar({ subsets: ["latin"] });
-
-interface CoffeeIconProps {}
+import { CoffeeIcon } from "./page";
 
 export default function Component() {
+  const handleLocationClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
+    const targetId = event.currentTarget.getAttribute("href");
+    const targetElement = document.querySelector(targetId || "");
+
+    if (targetElement) {
+      anime({
+        targets: document.scrollingElement,
+        scrollTop:
+          targetElement.getBoundingClientRect().top + window.pageYOffset,
+        duration: 800,
+        easing: "easeInOutQuad",
+      });
+    }
+  };
+
   const handleExploreClick = (event: React.MouseEvent) => {
     event.preventDefault();
 
@@ -37,15 +39,49 @@ export default function Component() {
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <main className="flex-1" id="start">
+      <header className="px-4 lg:px-6 h-20  flex items-center">
+        <Link className="flex items-center justify-center" href="#">
+          <CoffeeIcon />
+          <span className="sr-only">Charap</span>
+        </Link>
+        <nav className="ml-auto flex gap-2 sm:gap-6">
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#menu"
+            onClick={handleLocationClick}
+          >
+            Menu
+          </Link>
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#location"
+            onClick={handleLocationClick}
+          >
+            Location
+          </Link>
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#"
+          >
+            About
+          </Link>
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#"
+          >
+            Contact
+          </Link>
+        </nav>
+      </header>
+      <main className="flex-1">
         <section className="w-full h-screen flex flex-col items-center justify-center bg-white">
           <div className="px-2 md:px-2 space-y-8 xl:space-y-16 text-center">
             <div className="inline-block rounded-lg bg-[#FFF8F0] px-3 py-1 text-sm">
               Bubble Tea Shop
             </div>
-            <div className={amerton.className}>
-              <h1 className=" text-6xl  sm:text-8xl md:text-9xl ">Charap</h1>
-            </div>
+            <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+              Charap
+            </h1>
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
               Indulge in the perfect blend of flavors and textures at Charap,
               your premier bubble tea destination.
@@ -58,7 +94,6 @@ export default function Component() {
         <section
           className="w-full py-12 md:py-24 lg:py-32 bg-slate-100 min-h-screen"
           id="menu"
-          tabIndex={0}
         >
           <div className="container space-y-12 px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -219,17 +254,5 @@ export default function Component() {
         </nav>
       </footer>
     </div>
-  );
-}
-
-function CoffeeIcon(props: CoffeeIconProps) {
-  return (
-    <Image
-      src="/tea-icon.png"
-      width={50}
-      height={50}
-      style={{ rotate: "20deg" }}
-      alt="icon of a bubble tea drink in clip art style"
-    />
   );
 }
