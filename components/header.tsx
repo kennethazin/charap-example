@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import anime from "animejs";
 import Image from "next/image";
@@ -17,6 +18,21 @@ export default function Component() {
           targetElement.getBoundingClientRect().top + window.pageYOffset,
         duration: 800,
         easing: "easeInOutQuad",
+      });
+    }
+  };
+
+  const handleHomeClick = (event: React.MouseEvent) => {
+    event.preventDefault();
+
+    const menuElement = document.querySelector("#start");
+
+    if (menuElement) {
+      anime({
+        targets: document.scrollingElement,
+        scrollTop: menuElement.getBoundingClientRect().top + window.pageYOffset,
+        duration: 800,
+        easing: "easeInOutSine",
       });
     }
   };
