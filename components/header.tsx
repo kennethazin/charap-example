@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import anime from "animejs";
 import Image from "next/image";
@@ -41,7 +41,7 @@ export default function Component() {
     <header className="px-4 lg:px-6 h-20  flex items-center sticky top-0 bg-white z-10">
       <Link
         className="flex items-center justify-center"
-        href="#"
+        href="/"
         onClick={handleHomeClick}
       >
         <CoffeeIcon />

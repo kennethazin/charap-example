@@ -56,7 +56,7 @@ export default function Component() {
           </div>
         </section>
         <section
-          className="w-full py-12 md:py-24 lg:py-32 bg-slate-100 min-h-screen"
+          className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 min-h-screen"
           id="menu"
           tabIndex={0}
         >
@@ -71,100 +71,7 @@ export default function Component() {
                   customization options to suit your taste buds.
                 </p>
               </div>
-            </div>
-            <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
-              <div className="grid gap-1">
-                <h3 className="text-lg font-bold">Classic Flavors</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Indulge in our signature milk tea, fruit tea, and classic
-                  toppings.
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <h4 className="text-base font-semibold">Taro Milk Tea</h4>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Creamy and indulgent.
-                    </p>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <h4 className="text-base font-semibold">
-                      Strawberry Milk Tea
-                    </h4>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Sweet and refreshing.
-                    </p>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <h4 className="text-base font-semibold">Matcha Milk Tea</h4>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Earthy and invigorating.
-                    </p>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <h4 className="text-base font-semibold">Mango Fruit Tea</h4>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Tropical and tangy.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="grid gap-1">
-                <h3 className="text-lg font-bold">Customization</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Personalize your bubble tea with a variety of toppings and
-                  sweetness levels.
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <h4 className="text-base font-semibold">Boba Pearls</h4>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Chewy and delightful.
-                    </p>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <h4 className="text-base font-semibold">Jelly Cubes</h4>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Bouncy and refreshing.
-                    </p>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <h4 className="text-base font-semibold">
-                      Sweetness Levels
-                    </h4>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      From 0% to 100% to suit your taste.
-                    </p>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <h4 className="text-base font-semibold">Ice Levels</h4>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      From no ice to extra ice.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="grid gap-1">
-                <h3 className="text-lg font-bold">Seasonal Specials</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Explore our limited-time seasonal flavors and toppings.
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <h4 className="text-base font-semibold">
-                      Pumpkin Spice Latte
-                    </h4>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Cozy and autumnal.
-                    </p>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <h4 className="text-base font-semibold">Lychee Boba</h4>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Refreshing and tropical.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <MenuImage />
             </div>
           </div>
         </section>
@@ -230,6 +137,17 @@ function CoffeeIcon(props: CoffeeIconProps) {
       height={50}
       style={{ rotate: "20deg" }}
       alt="icon of a bubble tea drink in clip art style"
+    />
+  );
+}
+
+function MenuImage() {
+  return (
+    <Image
+      src="/menu.png"
+      width="2000"
+      height="3000"
+      alt="image of menu and offering selection "
     />
   );
 }
