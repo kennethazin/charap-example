@@ -146,7 +146,7 @@ function MenuImage() {
     <Image
       src="/menu.png"
       width="2000"
-      height="3000"
+      height="2000"
       alt="image of menu and offering selection "
     />
   );
