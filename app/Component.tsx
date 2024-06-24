@@ -37,6 +37,8 @@ export default function Component() {
     }
   };
 
+  const handleExploreClickWrapper = () => handleExploreClick();
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <header className="px-4 lg:px-6 h-20  flex items-center">
@@ -88,7 +90,7 @@ export default function Component() {
             </p>
           </div>
           <div className="mt-32">
-            <Explore onClick={() => handleExploreClick()} />
+            <Explore onClick={handleExploreClickWrapper} />
           </div>
         </section>
         <section

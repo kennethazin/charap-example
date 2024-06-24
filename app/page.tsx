@@ -23,8 +23,8 @@ const eczar = Eczar({ subsets: ["latin"] });
 interface CoffeeIconProps {}
 
 export default function Component() {
-  const handleExploreClick = (event: React.MouseEvent) => {
-    event.preventDefault();
+  const handleExploreClick = (event?: React.MouseEvent) => {
+    event?.preventDefault();
 
     const menuElement = document.querySelector("#menu");
 
@@ -37,6 +37,8 @@ export default function Component() {
       });
     }
   };
+
+  const handleExploreClickWrapper = () => handleExploreClick();
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -55,7 +57,7 @@ export default function Component() {
             </p>
           </div>
           <div className="mt-32">
-            <Explore onClick={handleExploreClick} />
+            <Explore onClick={handleExploreClickWrapper} />
           </div>
         </section>
         <section
