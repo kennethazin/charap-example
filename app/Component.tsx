@@ -5,7 +5,9 @@ import { Explore } from "@/components/explore-call";
 import CoffeeIcon from "./page";
 
 export default function Component() {
-  const handleLocationClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleLocationClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+  ): void => {
     event.preventDefault();
 
     const targetId = event.currentTarget.getAttribute("href");
