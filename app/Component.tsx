@@ -2,7 +2,7 @@
 import Link from "next/link";
 import anime from "animejs";
 import { Explore } from "@/components/explore-call";
-import { CoffeeIcon } from "./page";
+import CoffeeIcon from "./page";
 
 export default function Component() {
   const handleLocationClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
@@ -88,7 +88,7 @@ export default function Component() {
             </p>
           </div>
           <div className="mt-32">
-            <Explore onClick={handleExploreClick} />
+            <Explore onClick={handleExploreClick} />{" "}
           </div>
         </section>
         <section
