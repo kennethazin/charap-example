@@ -4,8 +4,11 @@ import Link from "next/link";
 import anime from "animejs";
 import Image from "next/image";
 import { Explore } from "@/components/explore-call";
+import { Menu } from "@/components/menu";
+import { About } from "@/components/about";
 import { Eczar } from "next/font/google";
 import localFont from "next/font/local";
+import { Separator } from "@/components/ui/separator";
 
 const amerton = localFont({
   src: [
@@ -64,14 +67,17 @@ export default function Component() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Explore Our Menu
+                  <u style={{ textDecorationColor: "yellow" }}>Explore </u> Our
+                  Menu
                 </h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   Discover a wide variety of bubble tea flavors and
                   customization options to suit your taste buds.
                 </p>
               </div>
-              <MenuImage />
+              <div style={{ marginTop: "50px" }}>
+                <Menu />
+              </div>
             </div>
           </div>
         </section>
@@ -83,7 +89,7 @@ export default function Component() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Visit Us
+                  <u style={{ textDecorationColor: "yellow" }}>Visit </u>us
                 </h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   Find us at our cozy bubble tea shop in the heart of the city.
@@ -110,6 +116,10 @@ export default function Component() {
               </div>
             </div>
           </div>
+        </section>
+        <section>
+          <Separator />
+          <About />
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
@@ -145,8 +155,8 @@ function MenuImage() {
   return (
     <Image
       src="/menu.png"
-      width="2000"
-      height="2000"
+      width="1000"
+      height="1000"
       alt="image of menu and offering selection "
     />
   );
