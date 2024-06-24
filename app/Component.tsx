@@ -88,7 +88,7 @@ export default function Component() {
             </p>
           </div>
           <div className="mt-32">
-            <Explore onClick={handleExploreClick} />
+            <Explore onClick={() => handleExploreClick()} />
           </div>
         </section>
         <section
