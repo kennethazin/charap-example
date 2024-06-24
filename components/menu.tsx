@@ -3,6 +3,22 @@
  * @see https://v0.dev/t/KKhWHcWuFl8
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
+interface AppleIconProps extends React.SVGAttributes<SVGSVGElement> {
+  className?: string;
+}
+
+interface CoffeeIconProps extends React.SVGAttributes<SVGSVGElement> {
+  className?: string;
+}
+
+interface CupSodaIconProps extends React.SVGAttributes<SVGSVGElement> {
+  className?: string;
+}
+
+interface PlusIconProps extends React.SVGAttributes<SVGSVGElement> {
+  className?: string;
+}
+
 export function Menu() {
   return (
     <div className="flex flex-col lg:flex-row lg:space-x-40 text-left">
@@ -165,7 +181,7 @@ export function Menu() {
   );
 }
 
-function AppleIcon(props) {
+function AppleIcon(props: AppleIconProps) {
   return (
     <svg
       {...props}
@@ -185,7 +201,7 @@ function AppleIcon(props) {
   );
 }
 
-function CoffeeIcon(props) {
+function CoffeeIcon(props: CoffeeIconProps) {
   return (
     <svg
       {...props}
@@ -207,7 +223,7 @@ function CoffeeIcon(props) {
   );
 }
 
-function CupSodaIcon(props) {
+function CupSodaIcon(props: CupSodaIconProps) {
   return (
     <svg
       {...props}
@@ -229,7 +245,7 @@ function CupSodaIcon(props) {
   );
 }
 
-function PlusIcon(props) {
+function PlusIcon(props: PlusIconProps) {
   return (
     <svg
       {...props}
