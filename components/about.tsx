@@ -13,9 +13,9 @@ export function About() {
                   <u style={{ textDecorationColor: "yellow" }}>About</u> us
                 </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                  We're a Filipino-owned bubble tea shop in the heart of Dublin,
-                  passionate about serving up the most delectable bubble tea
-                  experience. Our mission is to bring the vibrant flavors of
+                  We&apos;re a Filipino-owned bubble tea shop in the heart of
+                  Dublin, passionate about serving up the most delectable bubble
+                  tea experience. Our mission is to bring the vibrant flavors of
                   Asia to your fingertips, one sip at a time.
                 </p>
               </div>
@@ -66,8 +66,8 @@ export function About() {
                 <HeartIcon className="h-10 w-10 text-gray-500 dark:text-gray-400" />
                 <h3 className="text-xl font-bold">Customer-Centricity</h3>
                 <p className="text-center text-gray-500 dark:text-gray-400">
-                  Our customers' satisfaction is our top priority, and we're
-                  dedicated to providing an exceptional experience.
+                  Our customers&apos; satisfaction is our top priority, and
+                  we&apos;re dedicated to providing an exceptional experience.
                 </p>
               </div>
             </div>
