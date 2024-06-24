@@ -5,9 +5,7 @@ import { Explore } from "@/components/explore-call";
 import CoffeeIcon from "./page";
 
 export default function Component() {
-  const handleLocationClick = (
-    event: React.MouseEvent<HTMLAnchorElement>,
-  ): void => {
+  const handleLocationClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
 
     const targetId = event.currentTarget.getAttribute("href");
@@ -24,8 +22,8 @@ export default function Component() {
     }
   };
 
-  const handleExploreClick = (event: React.MouseEvent) => {
-    event.preventDefault();
+  const handleExploreClick = (event?: React.MouseEvent) => {
+    event?.preventDefault();
 
     const menuElement = document.querySelector("#menu");
 
@@ -90,7 +88,7 @@ export default function Component() {
             </p>
           </div>
           <div className="mt-32">
-            <Explore onClick={handleExploreClick} />{" "}
+            <Explore onClick={handleExploreClick} />
           </div>
         </section>
         <section
