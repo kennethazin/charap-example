@@ -4,12 +4,12 @@ import Image from "next/image";
 export function About() {
   return (
     <>
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 px-52 ">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none mb-10">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
+        <div className="container px-4 md:px-40">
+          <div className="grid gap-4 lg:grid-cols-[1fr_400px] lg:gap-8 xl:grid-cols-[1fr_600px]">
+            <div className="flex flex-col justify-center space-y-4 text-center md:text-left">
+              <div className="space-y-1">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none mb-4">
                   <u style={{ textDecorationColor: "yellow" }}>About</u> us
                 </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
@@ -22,55 +22,11 @@ export function About() {
             </div>
             <Image
               alt="Charap Bubble Tea"
-              className="rounded-xl mx-auto aspect-square overflow-hidden  object-cover lg:order-last mt-10"
+              className="rounded-xl mx-auto aspect-square overflow-hidden object-cover lg:order-last mt-4"
               height="400"
               src="/bubble.webp"
               width="400"
             />
-          </div>
-        </div>
-      </section>
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2 mb-10">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-10">
-                Our Passion, Your Delight
-              </h2>
-              <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 mb-10">
-                At Charap, a Filipino-owned bubble tea shop in the heart of
-                Dublin, we believe in creating an unforgettable bubble tea
-                experience. Our core values of quality, innovation, and
-                customer-centricity guide everything we do, from sourcing the
-                finest ingredients to crafting our unique flavor profiles.
-              </p>
-            </div>
-            <div className="grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-12 mb-28">
-              <div className="flex flex-col items-center justify-center space-y-2">
-                <TurtleIcon className="h-10 w-10 text-gray-500 dark:text-gray-400" />
-                <h3 className="text-xl font-bold">Quality</h3>
-                <p className="text-center text-gray-500 dark:text-gray-400">
-                  We source the freshest, highest-quality ingredients to ensure
-                  every sip is a delight.
-                </p>
-              </div>
-              <div className="flex flex-col items-center justify-center space-y-2">
-                <LightbulbIcon className="h-10 w-10 text-gray-500 dark:text-gray-400" />
-                <h3 className="text-xl font-bold">Innovation</h3>
-                <p className="text-center text-gray-500 dark:text-gray-400">
-                  Our team is constantly exploring new flavor combinations and
-                  techniques to push the boundaries of bubble tea.
-                </p>
-              </div>
-              <div className="flex flex-col items-center justify-center space-y-2">
-                <HeartIcon className="h-10 w-10 text-gray-500 dark:text-gray-400" />
-                <h3 className="text-xl font-bold">Customer-Centricity</h3>
-                <p className="text-center text-gray-500 dark:text-gray-400">
-                  Our customers&apos; satisfaction is our top priority, and
-                  we&apos;re dedicated to providing an exceptional experience.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

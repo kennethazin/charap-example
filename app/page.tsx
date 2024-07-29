@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Explore } from "@/components/explore-call";
 import { Menu } from "@/components/menu";
 import { About } from "@/components/about";
+import { Contact } from "@/components/contact";
 import { Eczar } from "next/font/google";
 import localFont from "next/font/local";
 import { Separator } from "@/components/ui/separator";
@@ -41,11 +42,11 @@ export default function Component() {
   const handleExploreClickWrapper = () => handleExploreClick();
 
   return (
-    <div className="flex flex-col min-h-[100dvh]">
+    <div className="flex flex-col min-h-[100dvh] ">
       <main className="flex-1" id="start">
         <section className="w-full h-screen flex flex-col items-center justify-center bg-white">
           <div className="px-2 md:px-2 space-y-8 xl:space-y-16 text-center">
-            <div className="inline-block rounded-lg bg-[#FFF8F0] px-3 py-1 text-sm">
+            <div className="inline-block rounded-lg bg-[#ffe97d] px-3 py-1 text-sm">
               Bubble Tea Shop
             </div>
             <div className={amerton.className}>
@@ -119,9 +120,19 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section>
-          <Separator />
+        <Separator />
+        <section
+          id="about"
+          className="w-full py-12 md:py-24 lg:py-32  min-h-screen"
+        >
           <About />
+        </section>
+        <Separator />
+        <section
+          id="contact"
+          className="w-full py-12 md:py-24 lg:py-32  min-h-screen"
+        >
+          <Contact />
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">

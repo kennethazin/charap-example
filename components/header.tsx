@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import anime from "animejs";
 import Image from "next/image";
@@ -66,14 +67,16 @@ export default function Component() {
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="/about"
+          href="#about"
+          onClick={handleLocationClick}
           tabIndex={0}
         >
           About
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#"
+          href="#contact"
+          onClick={handleLocationClick}
           tabIndex={0}
         >
           Contact
