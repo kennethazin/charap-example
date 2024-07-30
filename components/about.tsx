@@ -13,9 +13,9 @@ export function About() {
                   <u style={{ textDecorationColor: "yellow" }}>About</u> us
                 </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                  We are a Filipino-owned bubble tea shop in the heart of
-                  Dublin, passionate about serving up the most delectable bubble
-                  tea experience. Our mission is to bring the vibrant flavors of
+                  We a Filipino-owned bubble tea shop in the heart of Dublin,
+                  passionate about serving up the most delectable bubble tea
+                  experience. Our mission is to bring the vibrant flavors of
                   Asia to your fingertips, one sip at a time.
                 </p>
               </div>
