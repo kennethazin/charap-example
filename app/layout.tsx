@@ -5,7 +5,7 @@ import Header from "@/components/header";
 
 export const metadata: Metadata = {
   title: "Charap - Bubble Tea Dublin",
-  description: "Example small business website",
+  description: "Example small business websites",
 };
 
 export default function RootLayout({
