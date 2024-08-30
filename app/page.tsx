@@ -18,11 +18,6 @@ const amerton = localFont({
     },
   ],
 });
-
-const eczar = Eczar({ subsets: ["latin"] });
-
-interface CoffeeIconProps {}
-
 export default function Component() {
   const handleExploreClick = (event?: React.MouseEvent) => {
     event?.preventDefault();
@@ -78,8 +73,8 @@ export default function Component() {
                   customization options to suit your taste buds.
                 </p>
               </div>
-              <div style={{ marginTop: "50px" }}>
-                <Menu />
+              <div style={{ marginTop: "100px" }}>
+                <MenuImage />
               </div>
             </div>
           </div>
