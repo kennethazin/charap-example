@@ -4,12 +4,11 @@ import Link from "next/link";
 import anime from "animejs";
 import Image from "next/image";
 import { Explore } from "@/components/explore-call";
-import { Menu } from "@/components/menu";
 import { About } from "@/components/about";
 import { Contact } from "@/components/contact";
-import { Eczar } from "next/font/google";
 import localFont from "next/font/local";
 import { Separator } from "@/components/ui/separator";
+import ModalImage from "react-modal-image";
 
 const amerton = localFont({
   src: [
@@ -77,7 +76,12 @@ export default function Component() {
                 </p>
               </div>
               <div style={{ marginTop: "100px" }}>
-                <MenuImage />
+                <ModalImage
+                  small="/menu.png"
+                  large="/menu.png"
+                  imageBackgroundColor="#ffffff"
+                  showRotate={true}
+                />
               </div>
             </div>
           </div>
@@ -166,6 +170,17 @@ function MenuImage() {
   return (
     <Image
       src="/menu.png"
+      width="1000"
+      height="1000"
+      alt="image of menu and offering selection "
+    />
+  );
+}
+
+function SmallMenuImage() {
+  return (
+    <Image
+      src="/menusmall.png"
       width="1000"
       height="1000"
       alt="image of menu and offering selection "
