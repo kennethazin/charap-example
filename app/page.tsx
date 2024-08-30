@@ -18,6 +18,9 @@ const amerton = localFont({
     },
   ],
 });
+
+interface CoffeeIconProps {}
+
 export default function Component() {
   const handleExploreClick = (event?: React.MouseEvent) => {
     event?.preventDefault();
